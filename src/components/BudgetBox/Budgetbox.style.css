@@ -1,0 +1,30 @@
+.budgetBox {
+  background-color: white;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 80px;
+}
+
+.formControl {
+  display: flex;
+}
+
+.total {
+  background-color: black;
+  color: wheat;
+  padding: 8px;
+  font-family: revert;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.totalAmt {
+  margin-left: 20px;
+  background-color: red;
+  color: white;
+  padding: 8px;
+}
+
+.alert {
+  margin: 0 150px 20px;
+}

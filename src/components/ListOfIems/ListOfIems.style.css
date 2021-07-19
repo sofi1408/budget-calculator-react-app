@@ -1,0 +1,37 @@
+.itemList {
+  display: flex;
+  background: pink;
+  justify-content: space-around;
+  padding: 10px;
+  border: 1px solid red;
+  margin-bottom: 10px;
+}
+
+.itemDesc {
+  font-size: 20px;
+  text-transform: capitalize;
+  font-family: math;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #333;
+  width: 40%;
+}
+
+.itemAmt {
+  font-size: 16px;
+  font-family: sans-serif;
+  color: white;
+  font-weight: 600;
+  background-color: purple;
+  padding: 4px;
+}
+
+.deleteIcon,
+.editIcon {
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+ul {
+  padding-left: 0;
+}
