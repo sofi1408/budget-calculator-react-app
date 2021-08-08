@@ -26,19 +26,12 @@ const BudgetBox = () => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    if (desc === "") {
+    if (desc.trim() === "" || !amt || amt <= 0) {
       setAlert({
         type: "error",
-        message: "Please Enter A Valid Description",
+        message: "Please Enter Valid Data",
       });
-    }
-    if (amt <= 0) {
-      setAlert({
-        type: "error",
-        message: "Please Enter A Valid Amount",
-      });
-    }
-    if (!(alert.type === "error")) {
+    } else {
       if (edit) {
         const editedExpenses = items.map((item) => {
           if (item.id === id) {
@@ -66,7 +59,7 @@ const BudgetBox = () => {
   };
 
   const handleReset = () => {
-    setItems({});
+    setItems([]);
     setAlert({
       type: "warning",
       message: "List is reset",
@@ -75,7 +68,7 @@ const BudgetBox = () => {
 
   const editItem = (id) => {
     const item = items.filter((item) => item.id === id);
-    setDecs(item[0].description);
+    setDecs(item[0].description.trim());
     setAmt(item[0].amount);
     setId(id);
     setEdit(true);
